@@ -1,0 +1,11 @@
+
+start browser for test..
+
+Start Restaurant forma
+Start logs
+https://grechka:digital@xiaomi-shop.grechka.digital/catalog/smartfony-i-planshety/redmi/redmi-10c-3-64-gb-mint-green
+Click restaurant_forma
+input town
+Click choose_town
+
+quit browser..

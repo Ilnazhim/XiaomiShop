@@ -1,0 +1,23 @@
+
+start browser for test..
+
+Start Restaurant forma
+Start logs
+https://xiaomi-stores.ru/catalog/smartfony-i-planshety/redmi/redmi-10c-3-64-gb-mint-green
+Click restaurant_forma
+input town
+Click choose_town
+Click accept_cookie
+click_button_reserve
+click_button_cart
+button_make_reserve
+input_name
+input_phone
+input_mail
+Click checkbox
+Click button_make_order
+Click button_ok
+End logs
+Finish Tests
+
+quit browser..
