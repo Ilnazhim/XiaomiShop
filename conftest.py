@@ -9,7 +9,7 @@ def browser():
     print("\nstart browser for test..")
     options = Options()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
-    browser = webdriver.Chrome(chrome_options=options)
+    browser = webdriver.Chrome()
 
     yield browser
     browser.quit()
