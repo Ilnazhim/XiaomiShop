@@ -28,6 +28,8 @@ class ProductPage(BaseClass):
     checkbox = "//label[@class='small checkbox__label']"
     button_make_order = "//input[@class='btn popup-form__submit']"
     button_ok = "//button[@class='btn popup__btn js-popup-reserve-tgl']"
+    close_popap_order = "//img[@class='popup__close js-popup-reserve-tgl']"
+    close_popap_pre_order = "//img[@class='popup__close js-popup-presale-tgl']"
 
 
     # Getters
@@ -72,6 +74,12 @@ class ProductPage(BaseClass):
 
     def get_button_ok(self):
         return WebDriverWait(self.browser, 30).until(EC.element_to_be_clickable((By.XPATH, self.button_ok)))
+
+    def get_close_popap_order(self):
+        return WebDriverWait(self.browser, 30).until(EC.element_to_be_clickable((By.XPATH, self.close_popap_order)))
+
+    def get_close_popap_pre_order(self):
+        return WebDriverWait(self.browser, 30).until(EC.element_to_be_clickable((By.XPATH, self.close_popap_pre_order)))
 
     # Actions
     def click_button_town(self):
@@ -139,14 +147,20 @@ class ProductPage(BaseClass):
         self.get_button_ok().click()
         print("Click button_ok")
 
+    def click_close_popap_order(self):
+        self.get_close_popap_order().click()
+        print("Click close_popap_order")
+
+
+    def click_close_popap_pre_order(self):
+        self.get_close_popap_pre_order().click()
+        print("Click close_popap_pre_order")
+
 
     # Metods
     def make_the_order(self):
         """make_the_order"""
         with allure.step("make_the_order from product page"):
-            Logger.add_start_step(method="make_the_order")
-
-            self.get_current_url()
             self.click_button_town()
             self.input_input_town()
             time.sleep(3)
@@ -161,13 +175,11 @@ class ProductPage(BaseClass):
             self.click_checkbox()
             self.click_button_make_order()
             self.click_button_ok()
-            Logger.add_end_step(url=self.browser.current_url, method="make_the_order")
+
 
     def make_the_pre_order(self):
         """make_pre_order"""
         with allure.step("make_the_pre_order from product page"):
-            Logger.add_start_step(method="make_the_pre_order")
-
             self.click_button_town()
             self.input_input_pre_order_town()
             time.sleep(3)
@@ -180,5 +192,39 @@ class ProductPage(BaseClass):
             self.click_checkbox()
             self.click_button_make_order()
             self.click_button_ok()
-            Logger.add_end_step(url=self.browser.current_url, method="make_the_pre_order")
 
+    def make_the_order_close_popap(self):
+        """make_the_order"""
+        with allure.step("make_the_order from product page"):
+            self.click_button_town()
+            self.input_input_town()
+            time.sleep(3)
+            self.click_choose_town()
+            self.click_accept_cookie()
+            self.click_button_reserve()
+            self.click_button_cart()
+            self.click_button_make_reserve()
+            self.input_input_name()
+            self.input_input_phone()
+            self.input_input_mail()
+            self.click_checkbox()
+            self.click_button_make_order()
+            time.sleep(3)
+            self.click_close_popap_order()
+
+
+    def make_the_pre_order_close_popap(self):
+        """make_pre_order"""
+        with allure.step("make_the_pre_order from product page"):
+            self.click_button_town()
+            self.input_input_pre_order_town()
+            time.sleep(3)
+            self.click_choose_town()
+            self.click_accept_cookie()
+            self.click_button_pre_reserve()
+            self.input_input_name_pre_order()
+            self.input_input_phone()
+            self.input_input_mail()
+            self.click_checkbox()
+            self.click_button_make_order()
+            self.click_close_popap_pre_order()
