@@ -1,0 +1,20 @@
+
+start browser for test..
+
+Start Order Test
+Click button_town
+Input town
+Click choose_town
+Click accept_cookie
+Click_button_reserve
+Click_button_cart
+button_make_reserve
+input_name
+input_phone
+input_mail
+Click checkbox
+Click button_make_order
+Click close_popap_order
+Finish Tests
+
+quit browser..

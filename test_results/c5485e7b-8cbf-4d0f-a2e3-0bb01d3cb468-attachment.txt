@@ -1,0 +1,18 @@
+
+start browser for test..
+
+Start Pre-order Test
+Click button_town
+Input town
+Click choose_town
+Click accept_cookie
+Click_button_pre_reserve
+input_name_pre_order
+input_phone
+input_mail
+Click checkbox
+Click button_make_order
+Click close_popap_pre_order
+Finish Tests
+
+quit browser..

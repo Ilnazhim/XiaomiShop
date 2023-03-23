@@ -1,0 +1,10 @@
+
+start browser for test..
+
+Start Order Test
+Click button_town
+Input town
+Click choose_town
+Click accept_cookie
+
+quit browser..
